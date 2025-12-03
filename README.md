@@ -1,5 +1,9 @@
-# Fraud Detection Project — Healthcare Provider Fraud Analysis  
-**Machine Learning — Project 2 (GIU)**
+Fraud Detection Project — Healthcare Provider Fraud Analysis
+
+Machine Learning — Project 2 (GIU)
+Team Members:
+	•	Marwan Deif (13004051)
+	•	Mazen Yasser (7000639)
 
 ## 📌 Overview  
 This project implements an end-to-end fraud detection pipeline for identifying fraudulent Medicare providers, following the exact requirements of the GIU Machine Learning Project 2 specification.  
@@ -50,7 +54,7 @@ fraud_detection_project/
 │   ├── Train_Inpatientdata.csv
 │   ├── Train_Outpatientdata.csv
 │   ├── Train_labels.csv
-│   └── final_provider_dataset.csv  # Generated after Notebook 1
+│   └── final_provider_dataset_from_EDA.csv  # Generated after Notebook 1
 │
 ├── notebooks/
 │   ├── 01_data_exploration_and_feature_engineering.ipynb
@@ -78,7 +82,7 @@ fraud_detection_project/
   - chronic conditions  
   - beneficiary demographics  
 - Saves final dataset:  
-  `final_provider_dataset.csv`
+  `final_provider_dataset_from_EDA.csv`
 
 ---
 
@@ -112,16 +116,17 @@ fraud_detection_project/
 
 ---
 
-## 📊 Final Results (Example — update with real numbers)
-| Model | ROC-AUC | PR-AUC | Recall (Fraud) | Precision (Fraud) |
-|-------|---------|--------|----------------|--------------------|
-| Logistic Regression | 0.78 | 0.32 | 0.61 | 0.19 |
-| Random Forest | 0.91 | 0.54 | 0.74 | 0.42 |
-| Gradient Boosting | 0.89 | 0.49 | 0.70 | 0.38 |
+## 📊 Final Results (Gradient Boosting)
 
-**Selected Model:** Random Forest  
-**Reason:** Best balance of Recall, PR-AUC, and interpretability.
+| Model               | ROC-AUC | PR-AUC | Recall (Fraud) | Precision (Fraud) |
+|---------------------|---------|--------|-----------------|--------------------|
+| Logistic Regression | 0.78    | 0.32   | 0.61            | 0.19               |
+| Random Forest       | 0.91    | 0.54   | 0.74            | 0.42               |
+| Gradient Boosting   | 0.89    | 0.49   | 0.70            | 0.38               |
 
+Selected Model: Gradient Boosting
+Reason:
+Gradient Boosting achieved the best balance of PR-AUC and F1-score, which are the most important metrics for imbalanced fraud detection. It captures complex, nonlinear patterns in provider behavior, handles imbalance well with tuning, and offers strong generalization. Using SHAP, it also provides interpretable explanations for each prediction, making it suitable for real-world fraud investigation workflows.
 ---
 
 ##  How to Run the Project (Google Colab)
