@@ -124,7 +124,7 @@ fraud_detection_project/
 
 ---
 
-## 🚀 How to Run the Project (Google Colab)
+##  How to Run the Project (Google Colab)
 
 1. Open Google Colab.
 2. Upload the dataset files inside the Colab environment.
